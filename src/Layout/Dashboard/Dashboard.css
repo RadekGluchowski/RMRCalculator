@@ -1,4 +1,17 @@
 .wizard-container {
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
+
+@media screen and (min-width: 800px) {
+    .wizard-container {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+

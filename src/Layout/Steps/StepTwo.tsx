@@ -4,9 +4,9 @@ import { StepWizardChildProps } from "react-step-wizard";
 export const StepTwo: React.FC<Partial<StepWizardChildProps>> = ({ ...props }) => {
 
     return (
-        <div >
+        <div className="step-container">
             <h2>Step {props.currentStep}</h2>
-            <p><button onClick={props.previousStep}>Next Step</button></p>
+            <p><button onClick={props.previousStep}>Previous Step</button></p>
         </div>
     );
 }
