@@ -53,7 +53,7 @@ export const StepOne: React.FC<Partial<StepWizardChildProps>> = ({ currentStep, 
     );
 
     return (
-        <div className="step-container">
+        <>
             <Formik initialValues={initialValues} onSubmit={handleOnSubmit}>
                 <Form className="step-one--form-container">
                     <div className="step-one--form-wrapper">
@@ -128,7 +128,7 @@ export const StepOne: React.FC<Partial<StepWizardChildProps>> = ({ currentStep, 
                     </div>
                 </Form>
             </Formik>
-        </div>
+        </>
     );
 }
 
