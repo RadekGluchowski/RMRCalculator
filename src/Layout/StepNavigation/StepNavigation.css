@@ -1,0 +1,67 @@
+.nav-dot-container {
+    margin-bottom: -2rem;
+}
+
+ol {
+    margin-left: -4rem;
+    position: relative;
+    overflow: hidden;
+    counter-reset: wizard;
+}
+
+ol li::marker {
+    content: none;
+}
+
+li {
+    cursor: pointer;
+    position: relative;
+    float: left;
+    width: 50%;
+    text-align: center;
+    color: #555;
+}
+
+.current ~ li {
+    color: #555;
+}
+
+li:before {
+    counter-increment: wizard;
+    content: counter(wizard);
+    display: block;
+    color: black;
+    background-color: #ececec;
+    border: 2px solid #ececec;
+    text-align: center;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    border-radius: 2em;
+    position: relative;
+    left: 50%;
+    margin-bottom: 1em;
+    margin-left: -1em;
+    z-index: 1;
+}
+.current ~ li:before {
+    background-color: black;
+    color: #555;
+    border-color: #555;
+}
+
+li + li:after {
+    content: "";
+    display: block;
+    width: 100%;
+    background-color: #ececec;
+    height: 2px;
+    position: absolute;
+    left: -50%;
+    top: 1em;
+    z-index: 0;
+}
+
+.current ~ li:after {
+    background-color: #555;
+}
