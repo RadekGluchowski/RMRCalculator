@@ -20,7 +20,7 @@ input {
 
 input:focus {
   outline: none;
-  border-bottom: 0.3rem solid #f1c40f;
+  border-bottom: 0.3rem solid #24252a;;
 }
 
 input[type="number"]::-webkit-inner-spin-button {
@@ -33,6 +33,10 @@ select {
   border-radius: 0.25rem;
   padding: 0.75rem 1rem;
   color: black;
+}
+
+option {
+  background: #24252a;
 }
 
 button:hover {
@@ -65,4 +69,9 @@ button {
 
 button:focus {
   outline: none;
+}
+
+label {
+  color:#24252a;
+  padding: 0.4rem;
 }
