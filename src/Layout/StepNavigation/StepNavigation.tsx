@@ -2,6 +2,10 @@ import React from "react";
 import { StepWizardChildProps } from "react-step-wizard";
 import "./StepNavigation.css"
 
+enum StepNavigationStrings {
+    STEP = "Step"
+}
+
 export const StepNavigation: React.FC<Partial<StepWizardChildProps>> = ({ totalSteps, currentStep, goToStep }) => {
     const handleNavigation = (stepNumber: number) => {
         if (goToStep) {
@@ -12,7 +16,7 @@ export const StepNavigation: React.FC<Partial<StepWizardChildProps>> = ({ totalS
         <div className="nav-dot-container">
             <ol>
                 {[...Array(totalSteps)].map((x, i) =>
-                    <li key={i} onClick={() => handleNavigation(i)} className={currentStep === i + 1 ? "current" : ""}>Step {i + 1}</li>
+                    <li key={i} onClick={() => handleNavigation(i)} className={currentStep === i + 1 ? "current" : ""}>{StepNavigationStrings.STEP} {i + 1}</li>
                 )}
             </ol>
         </div>
