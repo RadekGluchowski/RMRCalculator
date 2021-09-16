@@ -1,10 +1,10 @@
-export interface stepOneUserData {
-    stepOneUserData: Array<StepOneInterface>
+export interface StepOneUserData {
+    stepOneUserData: object
 }
 
 export interface StepOneInterface {
     weight: number;
-    age: number;
+    age: string;
     sex: string;
     personType: string;
 }
