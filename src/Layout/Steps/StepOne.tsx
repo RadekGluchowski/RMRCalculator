@@ -18,6 +18,9 @@ enum StepOneForm {
     WEIGHT_FIELD_NAME = "weight",
     AGE_FIELD_ID = "age",
     AGE_FIELD_NAME = "age",
+    AGE_YOUNG = "10 - 18",
+    AGE_MIDDLE = "18 - 30",
+    AGE_OLD = "31 - 60+",
     SEX_FIELD_ID = "sex",
     SEX_FIELD_NAME = "sex",
     PERSON_TYPE_FIELD_ID = "personType",
@@ -63,12 +66,34 @@ export const StepOne: React.FC<Partial<StepWizardChildProps>> = ({ currentStep, 
                             id={StepOneForm.WEIGHT_FIELD_ID}
                             name={StepOneForm.WEIGHT_FIELD_NAME}
                         />
-                        <Field
-                            placeholder={StepOneForm.AGE_FIELD_NAME}
-                            as={NumberInput}
-                            id={StepOneForm.AGE_FIELD_ID}
-                            name={StepOneForm.AGE_FIELD_NAME}
-                        />
+                        <div className="step-one--select-field">
+                            <label> {StepOneForm.AGE_FIELD_NAME} </label>
+                            <Field
+                                placeholder={StepOneForm.AGE_FIELD_NAME}
+                                as={StepOneForm.SELECT_FIELD_TYPE}
+                                id={StepOneForm.AGE_FIELD_ID}
+                                name={StepOneForm.AGE_FIELD_NAME}
+                            >
+                                <option
+                                    value={StepOneForm.AGE_YOUNG}
+                                    title={StepOneForm.AGE_YOUNG}
+                                >
+                                    {StepOneForm.AGE_YOUNG}
+                                </option>
+                                <option
+                                    value={StepOneForm.AGE_MIDDLE}
+                                    title={StepOneForm.AGE_MIDDLE}
+                                >
+                                    {StepOneForm.AGE_MIDDLE}
+                                </option>
+                                <option
+                                    value={StepOneForm.AGE_OLD}
+                                    title={StepOneForm.AGE_OLD}
+                                >
+                                    {StepOneForm.AGE_OLD}
+                                </option>
+                            </Field>
+                        </div>
                         <div className="step-one--select-field">
                             <label> {StepOneForm.SEX_FIELD_NAME} </label>
                             <Field

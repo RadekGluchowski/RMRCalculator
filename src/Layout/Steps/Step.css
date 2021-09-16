@@ -17,8 +17,9 @@
 }
 
 #sex,
+#age,
 #personType {
-    width: 41%;
+    width: 40.5%;
 }
 
 .step-one--button-container {
