@@ -10,13 +10,16 @@ import { useDispatch } from "react-redux";
 enum StepOneForm {
     STEP = "Step",
     SELECT_FIELD_TYPE = "select",
-    WEIGHT_FIELD_ID = "weight",
+    WEIGHT_FIELD_LABLE = "Weight",
     WEIGHT_FIELD_NAME = "weight",
+    WEIGHT_FIELD_ID = "weight",
+    AGE_FIELD_LABEL = "Age",
     AGE_FIELD_ID = "age",
     AGE_FIELD_NAME = "age",
     AGE_YOUNG = "10 - 18",
     AGE_MIDDLE = "18 - 30",
     AGE_OLD = "31 - 60+",
+    SEX_FIELD_LABEL = "Sex",
     SEX_FIELD_ID = "sex",
     SEX_FIELD_NAME = "sex",
     PERSON_TYPE_FIELD_ID = "personType",
@@ -58,13 +61,13 @@ export const StepOne: React.FC<Partial<StepWizardChildProps>> = ({ currentStep, 
                 <Form className="step-one--form-container">
                     <div className="step-one--form-wrapper">
                         <Field
-                            placeholder={StepOneForm.WEIGHT_FIELD_NAME}
+                            placeholder={StepOneForm.WEIGHT_FIELD_LABLE}
                             as={NumberInput}
                             id={StepOneForm.WEIGHT_FIELD_ID}
                             name={StepOneForm.WEIGHT_FIELD_NAME}
                         />
                         <div className="step-one--select-field">
-                            <label> {StepOneForm.AGE_FIELD_NAME} </label>
+                            <label> {StepOneForm.AGE_FIELD_LABEL} </label>
                             <Field
                                 placeholder={StepOneForm.AGE_FIELD_NAME}
                                 as={StepOneForm.SELECT_FIELD_TYPE}
@@ -92,7 +95,7 @@ export const StepOne: React.FC<Partial<StepWizardChildProps>> = ({ currentStep, 
                             </Field>
                         </div>
                         <div className="step-one--select-field">
-                            <label> {StepOneForm.SEX_FIELD_NAME} </label>
+                            <label> {StepOneForm.SEX_FIELD_LABEL} </label>
                             <Field
                                 placeholder={StepOneForm.SEX_FIELD_NAME}
                                 as={StepOneForm.SELECT_FIELD_TYPE}
