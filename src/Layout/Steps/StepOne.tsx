@@ -4,6 +4,8 @@ import { Formik, Form, Field } from "formik";
 import "./Step.css";
 import { NumberInput } from "../../Components/Inputs/NumberInput/NumberInput";
 import { StepOneInterface } from "../../Interfaces/stepOneUserData.interface";
+import { addStepOneUserData } from "../../Store/Actions/steps.actions";
+import { useDispatch } from "react-redux";
 
 enum StepOneForm {
     STEP = "Step",
@@ -35,18 +37,19 @@ enum StepOneForm {
 export const StepOne: React.FC<Partial<StepWizardChildProps>> = ({ currentStep, nextStep }) => {
     const [initialValues] = useState<StepOneInterface>({
         weight: 60,
-        age: 18,
-        sex: "male",
-        personType: "active"
+        age: StepOneForm.AGE_YOUNG,
+        sex: StepOneForm.SEX_MALE,
+        personType: StepOneForm.PERSON_TYPE_LOW_ACTIVE_VALUE
     });
+
+    const dispatch = useDispatch();
 
     const handleOnSubmit = useCallback(
         (values, actions) => {
-            console.log(values)
-            //  saveFirstStep(values); 
+            dispatch(addStepOneUserData(values));
             actions.setSubmitting(false);
         },
-        []
+        [dispatch]
     );
 
     return (
