@@ -3,13 +3,7 @@ import { StepWizardChildProps } from "react-step-wizard";
 import { Formik, Form, Field } from "formik";
 import "./Step.css";
 import { NumberInput } from "../../Components/Inputs/NumberInput/NumberInput";
-
-interface StepOneInterface {
-    weight: number;
-    age: number;
-    sex: string;
-    personType: string;
-}
+import { StepOneInterface } from "../../Interfaces/stepOneUserData.interface";
 
 enum StepOneForm {
     STEP = "Step",
