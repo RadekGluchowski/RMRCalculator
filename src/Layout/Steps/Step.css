@@ -1,8 +1,8 @@
-.step-one--form-container {
-    width: 35rem;
+.step--form-container {
+    width: 60rem;
 }
 
-.step-one--form-wrapper {
+.step--form-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,6 +15,15 @@
     align-items: center;
     margin-top: 0.5rem;
 }
+
+.step-two--select-field {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
 
 #sex,
 #age,

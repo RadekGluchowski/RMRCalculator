@@ -37,7 +37,7 @@ enum StepOneForm {
 }
 
 
-export const StepOne: React.FC<Partial<StepWizardChildProps>> = ({ currentStep, nextStep }) => {
+export const StepOne: React.FC<Partial<StepWizardChildProps>> = ({ nextStep }) => {
     const [initialValues] = useState<StepOneInterface>({
         weight: 60,
         age: StepOneForm.AGE_YOUNG,
@@ -58,8 +58,8 @@ export const StepOne: React.FC<Partial<StepWizardChildProps>> = ({ currentStep, 
     return (
         <>
             <Formik initialValues={initialValues} onSubmit={handleOnSubmit}>
-                <Form className="step-one--form-container">
-                    <div className="step-one--form-wrapper">
+                <Form className="step--form-container">
+                    <div className="step--form-wrapper">
                         <Field
                             placeholder={StepOneForm.WEIGHT_FIELD_LABLE}
                             as={NumberInput}
