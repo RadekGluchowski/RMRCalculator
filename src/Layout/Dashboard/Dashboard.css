@@ -1,6 +1,6 @@
 .wizard-container {
-    width: 35rem;
-    height: 30rem;
+    width: 60rem;
+    height: fit-content;
     display: flex;
     justify-content: center;
     margin-top: 2rem;
