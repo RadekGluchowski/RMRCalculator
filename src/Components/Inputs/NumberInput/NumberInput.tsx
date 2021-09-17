@@ -11,9 +11,9 @@ interface FormikFieldProps {
 
 export const NumberInput: React.FC<FormikFieldProps> = ({ placeholder, ...props }: FormikFieldProps) => {
     return (
-        <div className="number-input">
+        <div className="number-input--container">
             <label> {placeholder} </label>
-            <input type="number" {...props} />
+            <input className="number-input" type="number" {...props} />
         </div>
     )
 };

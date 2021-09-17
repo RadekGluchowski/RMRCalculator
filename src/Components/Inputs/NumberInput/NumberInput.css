@@ -1,8 +1,10 @@
-.number-input {
+.number-input--container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 0.5rem;
 }
 
-
+.number-input {
+    width: 37%;
+}
