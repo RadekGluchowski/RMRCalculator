@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import { StepWizardChildProps } from "react-step-wizard";
 import { Formik, Form, Field } from "formik";
 import "./Step.css";
-import { NumberInput } from "../../Components/Inputs/NumberInput/CustomInputField";
+import { CustomInputField } from "../../Components/Inputs/CustomInputField/CustomInputField";
 import { StepOneInterface } from "../../Interfaces/stepOneUserData.interface";
 import { addStepOneUserData } from "../../Store/Actions/steps.actions";
 import { useDispatch } from "react-redux";
@@ -62,7 +62,7 @@ export const StepOne: React.FC<Partial<StepWizardChildProps>> = ({ nextStep }) =
                     <div className="step--form-wrapper">
                         <Field
                             placeholder={StepOneForm.WEIGHT_FIELD_LABLE}
-                            as={NumberInput}
+                            as={CustomInputField}
                             id={StepOneForm.WEIGHT_FIELD_ID}
                             name={StepOneForm.WEIGHT_FIELD_NAME}
                         />

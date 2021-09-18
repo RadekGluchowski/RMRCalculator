@@ -10,7 +10,7 @@ interface FormikFieldProps {
     inputType?: string,
 }
 
-export const NumberInput: React.FC<FormikFieldProps> = ({ placeholder, inputType = "number", ...props }: FormikFieldProps) => {
+export const CustomInputField: React.FC<FormikFieldProps> = ({ placeholder, inputType = "number", ...props }: FormikFieldProps) => {
     return (
         <div className="custom-input--container">
             <label> {placeholder} </label>
