@@ -31,7 +31,9 @@ export enum StepTwoForm {
     ACTIVITY_TYPE = "Activity Type",
     ACTIVITY_TYPE_ID = "activityType",
     TIME_FIELD = "Time in hours",
-    CALCULATE_BTN_NAME = "Calculate"
+    CALCULATE_BTN_NAME = "Calculate",
+    ADD_MORE_ACTIVITIES_BTN_NAME = "Add More Activities",
+    DELETE_BTN_NAME = "Delete",
 }
 
 export enum StepShared {
