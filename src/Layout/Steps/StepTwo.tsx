@@ -4,7 +4,7 @@ import { StepWizardChildProps } from "react-step-wizard";
 import { StepTwoInterface } from "../../Interfaces/stepTwoUserData.interface";
 import { useDispatch } from "react-redux";
 import "./Step.css";
-import { NumberInput } from "../../Components/Inputs/NumberInput/NumberInput";
+import { NumberInput } from "../../Components/Inputs/NumberInput/CustomInputField";
 
 enum StepTwoForm {
     PREVIOUS_STEP_BTN_TEXT = "Previous Step"
@@ -103,6 +103,7 @@ export const StepTwo: React.FC<Partial<StepWizardChildProps>> = ({ previousStep 
                                                     as={NumberInput}
                                                     id={StepOneForm.WEIGHT_FIELD_ID}
                                                     name={`activities[${index}].activityAmount`}
+                                                    test="lol"
                                                 />
                                                 <button onClick={() => remove(index)}>
                                                     Delete

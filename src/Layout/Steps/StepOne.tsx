@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import { StepWizardChildProps } from "react-step-wizard";
 import { Formik, Form, Field } from "formik";
 import "./Step.css";
-import { NumberInput } from "../../Components/Inputs/NumberInput/NumberInput";
+import { NumberInput } from "../../Components/Inputs/NumberInput/CustomInputField";
 import { StepOneInterface } from "../../Interfaces/stepOneUserData.interface";
 import { addStepOneUserData } from "../../Store/Actions/steps.actions";
 import { useDispatch } from "react-redux";
