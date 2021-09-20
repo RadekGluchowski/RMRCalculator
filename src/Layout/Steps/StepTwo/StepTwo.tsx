@@ -1,14 +1,15 @@
 import React, { useState, useCallback } from "react";
 import { Formik, Form, Field, FieldArray } from "formik";
 import { StepWizardChildProps } from "react-step-wizard";
-import { StepTwoInterface } from "../../Interfaces/stepTwoUserData.interface";
+import { StepTwoInterface } from "../../../Interfaces/stepTwoUserData.interface";
 import { useDispatch } from "react-redux";
-import "./Step.css";
-import { CustomInputField } from "../../Components/Inputs/CustomInputField/CustomInputField";
-import { StepShared, StepTwoForm } from "./StepEnums";
-import { ActivitiesData } from "./StepConstants";
+import "../Step.css";
+import { CustomInputField } from "../../../Components/Inputs/CustomInputField/CustomInputField";
+import { StepShared, StepTwoForm } from "../StepEnums";
+import { ActivitiesData } from "../StepConstants";
+import { addStepTwoUserData } from "../../../Store/Actions/steps.actions";
 
-export const StepTwo: React.FC<Partial<StepWizardChildProps>> = ({ previousStep }) => {
+export const StepTwo: React.FC<Partial<StepWizardChildProps>> = ({ previousStep, nextStep }) => {
     const [initialValues] = useState<StepTwoInterface>({
         activities: [{
             activityType: "Aerobics (intensive)",
@@ -20,8 +21,7 @@ export const StepTwo: React.FC<Partial<StepWizardChildProps>> = ({ previousStep 
 
     const handleOnSubmit = useCallback(
         (values, actions) => {
-            console.log(values)
-            //    dispatch(addStepOneUserData(values));
+            dispatch(addStepTwoUserData(values));
             actions.setSubmitting(false);
         },
         [dispatch]
@@ -75,7 +75,7 @@ export const StepTwo: React.FC<Partial<StepWizardChildProps>> = ({ previousStep 
                             <button onClick={previousStep} >
                                 {StepTwoForm.PREVIOUS_STEP_BTN_TEXT}
                             </button>
-                            <button type="submit">
+                            <button onClick={nextStep} type="submit">
                                 {StepTwoForm.CALCULATE_BTN_NAME}
                             </button>
                         </div>

@@ -1,12 +1,12 @@
 import React, { useState, useCallback } from "react";
 import { StepWizardChildProps } from "react-step-wizard";
 import { Formik, Form, Field } from "formik";
-import "./Step.css";
-import { CustomInputField } from "../../Components/Inputs/CustomInputField/CustomInputField";
-import { StepOneInterface } from "../../Interfaces/stepOneUserData.interface";
-import { addStepOneUserData } from "../../Store/Actions/steps.actions";
+import '../Step.css'
+import { CustomInputField } from "../../../Components/Inputs/CustomInputField/CustomInputField";
+import { StepOneInterface } from "../../../Interfaces/stepOneUserData.interface";
+import { addStepOneUserData } from "../../../Store/Actions/steps.actions";
 import { useDispatch } from "react-redux";
-import { StepOneForm, StepShared } from "./StepEnums";
+import { StepOneForm, StepShared } from "../StepEnums";
 
 export const StepOne: React.FC<Partial<StepWizardChildProps>> = ({ nextStep }) => {
     const [initialValues] = useState<StepOneInterface>({
