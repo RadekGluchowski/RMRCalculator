@@ -12,6 +12,11 @@ export const StepNavigation: React.FC<Partial<StepWizardChildProps>> = ({ totalS
             goToStep(stepNumber + 1)
         }
     }
+
+    if (typeof totalSteps === "number") {
+        totalSteps -= 1;
+    }
+
     return (
         <>
             <ol>
