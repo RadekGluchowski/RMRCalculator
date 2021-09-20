@@ -4,7 +4,9 @@ export interface StepOneUserData {
 
 export interface StepsUserData {
     stepOneUserData: object,
-    stepTwoUserData: object
+    stepTwoUserData: object,
+    stepOneSummary: object,
+    stepTwoSummary: object,
 }
 
 export interface StepOneInterface {
