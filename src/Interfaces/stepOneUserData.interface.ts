@@ -5,8 +5,8 @@ export interface StepOneUserData {
 export interface StepsUserData {
     stepOneUserData: object,
     stepTwoUserData: object,
-    stepOneSummary: object,
-    stepTwoSummary: object,
+    stepOneSummary: number,
+    stepTwoSummary: number,
 }
 
 export interface StepOneInterface {

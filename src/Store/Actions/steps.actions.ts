@@ -8,8 +8,8 @@ export const CALCULATE_STEP_TWO_USER_DATA = "CALCULATE_STEP_TWO_USER_DATA";
 
 type AddStepOneUserData = { type: typeof ADD_STEP_ONE_USER_DATA, payload: StepOneInterface }
 type AddStepTwoUserData = { type: typeof ADD_STEP_TWO_USER_DATA, payload: StepTwoInterface }
-type CalculateStepOneSummary = { type: typeof CALCULATE_STEP_ONE_USER_DATA, payload: {} }
-type CalculateStepTwoSummary = { type: typeof CALCULATE_STEP_TWO_USER_DATA, payload: {} }
+type CalculateStepOneSummary = { type: typeof CALCULATE_STEP_ONE_USER_DATA, payload: number }
+type CalculateStepTwoSummary = { type: typeof CALCULATE_STEP_TWO_USER_DATA, payload: number }
 
 export const addStepOneUserData = (stepOneUserData: StepOneInterface): AddStepOneUserData => ({
     type: ADD_STEP_ONE_USER_DATA,
@@ -21,12 +21,12 @@ export const addStepTwoUserData = (stepTwoUserData: StepTwoInterface): AddStepTw
     payload: stepTwoUserData
 })
 
-export const calculateStepOneSummary = (stepOneSummaryUserData: {}): CalculateStepOneSummary => ({
+export const calculateStepOneSummary = (stepOneSummaryUserData: number): CalculateStepOneSummary => ({
     type: CALCULATE_STEP_ONE_USER_DATA,
     payload: stepOneSummaryUserData
 })
 
-export const calculateStepTwoSummary = (stepTwoSummaryUserData: {}): CalculateStepTwoSummary => ({
+export const calculateStepTwoSummary = (stepTwoSummaryUserData: number): CalculateStepTwoSummary => ({
     type: CALCULATE_STEP_TWO_USER_DATA,
     payload: stepTwoSummaryUserData
 })

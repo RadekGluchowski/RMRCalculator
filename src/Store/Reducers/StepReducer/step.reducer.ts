@@ -5,8 +5,8 @@ import { StepsUserData } from "../../../Interfaces/stepOneUserData.interface";
 const initialState = {
     stepOneUserData: {},
     stepTwoUserData: {},
-    stepOneSummary: {},
-    stepTwoSummary: {},
+    stepOneSummary: 0,
+    stepTwoSummary: 0,
 }
 
 export const stepReducer = (state: StepsUserData = initialState, action: StepsActions) => {
@@ -20,7 +20,6 @@ export const stepReducer = (state: StepsUserData = initialState, action: StepsAc
                 draft.stepTwoUserData = action.payload;
                 break;
             case CALCULATE_STEP_ONE_USER_DATA:
-                console.log(action.payload)
                 draft.stepOneSummary = action.payload;
                 break;
             case CALCULATE_STEP_TWO_USER_DATA:
