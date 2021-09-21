@@ -72,7 +72,7 @@ export const StepTwo: React.FC<Partial<StepWizardChildProps>> = ({ previousStep,
                             </FieldArray>
                         </div>
                         <div className="step-two--button-container">
-                            <button onClick={previousStep} >
+                            <button onClick={previousStep} type="button">
                                 {StepTwoForm.PREVIOUS_STEP_BTN_TEXT}
                             </button>
                             <button onClick={nextStep} type="submit">
