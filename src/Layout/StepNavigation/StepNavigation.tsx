@@ -6,12 +6,7 @@ enum StepNavigationStrings {
     STEP = "Step"
 }
 
-export const StepNavigation: React.FC<Partial<StepWizardChildProps>> = ({ totalSteps, currentStep, goToStep }) => {
-    const handleNavigation = (stepNumber: number) => {
-        if (goToStep) {
-            goToStep(stepNumber + 1)
-        }
-    }
+export const StepNavigation: React.FC<Partial<StepWizardChildProps>> = ({ totalSteps, currentStep }) => {
 
     if (typeof totalSteps === "number") {
         totalSteps -= 1;
@@ -21,7 +16,7 @@ export const StepNavigation: React.FC<Partial<StepWizardChildProps>> = ({ totalS
         <>
             <ol>
                 {[...Array(totalSteps)].map((x, i) =>
-                    <li key={i} onClick={() => handleNavigation(i)} className={currentStep === i + 1 ? "current" : ""}>{StepNavigationStrings.STEP} {i + 1}</li>
+                    <li key={i} className={currentStep === i + 1 ? "current" : ""}>{StepNavigationStrings.STEP} {i + 1}</li>
                 )}
             </ol>
         </>
