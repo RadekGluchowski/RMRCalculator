@@ -62,7 +62,7 @@ export const StepTwo: React.FC<Partial<StepWizardChildProps>> = ({ previousStep,
                                             </div>
                                         ))}
                                         {values.activities.length < 5 ?
-                                            <button onClick={() => push({ activityType: "", activityAmount: 0 })} >
+                                            <button type="button" onClick={() => push({ activityType: "", activityAmount: 0 })} >
                                                 {StepTwoForm.ADD_MORE_ACTIVITIES_BTN_NAME}
                                             </button>
                                             : null

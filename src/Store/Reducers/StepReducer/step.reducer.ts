@@ -23,7 +23,6 @@ export const stepReducer = (state: StepsUserData = initialState, action: StepsAc
                 draft.stepOneSummary = action.payload;
                 break;
             case CALCULATE_STEP_TWO_USER_DATA:
-                console.log(action.payload)
                 draft.stepTwoSummary = action.payload;
                 break;
             default:
