@@ -6,8 +6,8 @@ import { useDispatch } from "react-redux";
 import "../Step.css";
 import { CustomInputField } from "../../../Components/Inputs/CustomInputField/CustomInputField";
 import { StepShared, StepTwoForm } from "../StepEnums";
-import { ActivitiesData } from "../StepConstants";
 import { addStepTwoUserData } from "../../../Store/Actions/steps.actions";
+import { ActivitiesData } from "../../../Core/ActivitiesData/ActivitesData";
 
 export const StepTwo: React.FC<Partial<StepWizardChildProps>> = ({ previousStep, nextStep }) => {
     const [initialValues] = useState<StepTwoInterface>({

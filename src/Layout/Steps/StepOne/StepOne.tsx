@@ -7,13 +7,14 @@ import { StepOneInterface } from "../../../Interfaces/stepOneUserData.interface"
 import { addStepOneUserData } from "../../../Store/Actions/steps.actions";
 import { useDispatch } from "react-redux";
 import { StepOneForm, StepShared } from "../StepEnums";
+import { PersonalData } from "../../../Core/PersonalData/PersonalData";
 
 export const StepOne: React.FC<Partial<StepWizardChildProps>> = ({ nextStep }) => {
     const [initialValues] = useState<StepOneInterface>({
         weight: 60,
-        age: StepOneForm.AGE_YOUNG,
-        sex: StepOneForm.SEX_MALE,
-        personType: StepOneForm.PERSON_TYPE_LOW_ACTIVE_VALUE
+        age: PersonalData.AgeYoung.type,
+        sex: PersonalData.SexMale,
+        personType: PersonalData.PersonTypeLowActive.type
     });
 
     const dispatch = useDispatch();
@@ -46,22 +47,22 @@ export const StepOne: React.FC<Partial<StepWizardChildProps>> = ({ nextStep }) =
                                 name={StepOneForm.AGE_FIELD_NAME}
                             >
                                 <option
-                                    value={StepOneForm.AGE_YOUNG}
-                                    title={StepOneForm.AGE_YOUNG}
+                                    value={PersonalData.AgeYoung.type}
+                                    title={PersonalData.AgeYoung.type}
                                 >
-                                    {StepOneForm.AGE_YOUNG}
+                                    {PersonalData.AgeYoung.type}
                                 </option>
                                 <option
-                                    value={StepOneForm.AGE_MIDDLE}
-                                    title={StepOneForm.AGE_MIDDLE}
+                                    value={PersonalData.AgeMiddle.type}
+                                    title={PersonalData.AgeMiddle.type}
                                 >
-                                    {StepOneForm.AGE_MIDDLE}
+                                    {PersonalData.AgeMiddle.type}
                                 </option>
                                 <option
-                                    value={StepOneForm.AGE_OLD}
-                                    title={StepOneForm.AGE_OLD}
+                                    value={PersonalData.AgeOld.type}
+                                    title={PersonalData.AgeOld.type}
                                 >
-                                    {StepOneForm.AGE_OLD}
+                                    {PersonalData.AgeOld.type}
                                 </option>
                             </Field>
                         </div>
@@ -74,16 +75,16 @@ export const StepOne: React.FC<Partial<StepWizardChildProps>> = ({ nextStep }) =
                                 name={StepOneForm.SEX_FIELD_NAME}
                             >
                                 <option
-                                    value={StepOneForm.SEX_MALE}
-                                    title={StepOneForm.SEX_MALE}
+                                    value={PersonalData.SexMale}
+                                    title={PersonalData.SexMale}
                                 >
-                                    {StepOneForm.SEX_MALE}
+                                    {PersonalData.SexMale}
                                 </option>
                                 <option
-                                    value={StepOneForm.SEX_FEMALE}
-                                    title={StepOneForm.SEX_FEMALE}
+                                    value={PersonalData.SexFemale}
+                                    title={PersonalData.SexFemale}
                                 >
-                                    {StepOneForm.SEX_FEMALE}
+                                    {PersonalData.SexFemale}
                                 </option>
                             </Field>
                         </div>
@@ -97,19 +98,19 @@ export const StepOne: React.FC<Partial<StepWizardChildProps>> = ({ nextStep }) =
                                 name={StepOneForm.PERSON_TYPE_FIELD_NAME}
                             >
                                 <option
-                                    value={StepOneForm.PERSON_TYPE_LOW_ACTIVE_VALUE}
+                                    value={PersonalData.PersonTypeLowActive.type}
                                     title={StepOneForm.PERSON_TYPE_LOW_ACTIVE_NAME}
                                 >
                                     {StepOneForm.PERSON_TYPE_LOW_ACTIVE_NAME}
                                 </option>
                                 <option
-                                    value={StepOneForm.PERSON_TYPE_MEDIUM_ACTIVE_VALUE}
+                                    value={PersonalData.PersonTypeLowActive.type}
                                     title={StepOneForm.PERSON_TYPE_MEDIUM_ACTIVE_NAME}
                                 >
                                     {StepOneForm.PERSON_TYPE_MEDIUM_ACTIVE_NAME}
                                 </option>
                                 <option
-                                    value={StepOneForm.PERSON_TYPE_HIGHT_ACTIVE_VALUE}
+                                    value={PersonalData.PersonTypeHightActive.type}
                                     title={StepOneForm.PERSON_TYPE_HIGHT_ACTIVE_NAME}
                                 >
                                     {StepOneForm.PERSON_TYPE_HIGHT_ACTIVE_NAME}
