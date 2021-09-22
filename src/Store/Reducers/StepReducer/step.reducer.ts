@@ -1,9 +1,15 @@
 import { ADD_STEP_ONE_USER_DATA, ADD_STEP_TWO_USER_DATA, CALCULATE_STEP_ONE_USER_DATA, CALCULATE_STEP_TWO_USER_DATA, StepsActions } from "../../Actions/steps.actions"
 import produce, { Draft } from 'immer';
 import { StepsUserData } from "../../../Interfaces/stepOneUserData.interface";
+import { PersonalData } from "../../../Core/PersonalData/PersonalData";
 
 const initialState = {
-    stepOneUserData: {},
+    stepOneUserData: {
+        weight: 60,
+        age: PersonalData.AgeYoung.type,
+        sex: PersonalData.SexMale,
+        personType: PersonalData.PersonTypeLowActive.type
+    },
     stepTwoUserData: {},
     stepOneSummary: 0,
     stepTwoSummary: 0,
@@ -13,7 +19,6 @@ export const stepReducer = (state: StepsUserData = initialState, action: StepsAc
     return produce(state, (draft: Draft<StepsUserData>) => {
         switch (action.type) {
             case ADD_STEP_ONE_USER_DATA:
-                console.log()
                 draft.stepOneUserData = action.payload;
                 break;
             case ADD_STEP_TWO_USER_DATA:
