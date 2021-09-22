@@ -1,9 +1,9 @@
 export interface StepOneUserData {
-    stepOneUserData: object
+    stepOneUserData: StepOneInterface
 }
 
 export interface StepsUserData {
-    stepOneUserData: object,
+    stepOneUserData: StepOneInterface,
     stepTwoUserData: object,
     stepOneSummary: number,
     stepTwoSummary: number,
