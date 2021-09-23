@@ -15,30 +15,27 @@ export const StepSummary: React.FC<Partial<StepWizardChildProps>> = ({ }) => {
     const carbsPercentOfTotalKcal = 60;
 
     return (
-        <div>
-            <div>
-                <p>  {summaryKcal}</p>
-            </div>
-            <>
-                <p>  {carbsInGrams}</p>
-            </>
-            <>
-                <p>  {carbsPercentOfTotalKcal}</p>
-            </>
-            <>
-                <p> {proteinsInGrams} </p>
-            </>
-            <>
-                <p> {proteinsPercentOfTotalKcal} </p>
-            </>
-
-            <>
-                <p> {fatPercentOfTotalKcal} </p>
-            </>
-
-            <>
-                <p> {fatInGrams} </p>
-            </>
+        <div className="summary--container">
+            <table>
+                <tr>
+                    <th>Total kcal</th>
+                    <th>Amount of carbs</th>
+                    <th>Amount of proteins</th>
+                    <th>Amount of fat</th>
+                </tr>
+                <tr>
+                    <td><p> {summaryKcal}</p></td>
+                    <td><p> {carbsInGrams} grams</p></td>
+                    <td><p> {proteinsInGrams} grams </p></td>
+                    <td><p> {fatInGrams} grams</p> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><p>{carbsPercentOfTotalKcal} %</p></td>
+                    <td><p>{proteinsPercentOfTotalKcal} %</p></td>
+                    <td><p>{fatPercentOfTotalKcal} %</p></td>
+                </tr>
+            </table>
         </div>
     );
 }
